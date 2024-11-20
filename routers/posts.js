@@ -15,7 +15,14 @@ router.get('/:id', (req, res) => {
 //store
 router.post('/', (req, res) => {
     res.json(`crea un nuovo post`)
-})
+});
+
+//update
+router.put('/:id', (req,res) => {
+    const {id}= req.params;
+    res.json(`modifica del post con id ${id}`);
+});
+
 
 
 
