@@ -42,7 +42,7 @@ const posts =[
 ];
 
 app.use(express.static('public/images'));
-app.use('/posts', postsRouter)
+app.use('/', postsRouter)
 
 app.get ('/', (req,res) => {
     res.send('server del mio blog')

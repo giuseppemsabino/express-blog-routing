@@ -1,13 +1,20 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('/', (req,res) => {
+//index
+router.get('/posts', (req,res) => {
     res.send('lista dei post');
 });
 
-router.get('/:id', (req,res)=> {
-    const text=  'homepage';
-    res.json(text);
+//show
+router.get('/:id', (req, res) => {
+    const { id } = req.params;
+    res.json(`Dettaglio del post ${id}`);
+});
+
+//store
+router.post('/', (req, res) => {
+    res.json(`crea un nuovo post`)
 })
 
 
